@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="interactive-rating-component-main.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
 <title>Frontend Mentor | Interactive rating component</title>
 
 </head>
+
 <body>
 <main class="bg">
   <div class="container">
@@ -24,21 +25,36 @@
       to help us improve our offering!
     </p>
 
-    <div class="rating_radio">      
-     <label><input class="rr_input" type="radio" name="rating" id="one"/><span class="rr_span">1</span></label>
-     <label><input class="rr_input" type="radio" name="rating" id="two"/><span class="rr_span">2</span></label>
-     <label><input class="rr_input" type="radio" name="rating" id="three"/><span class="rr_span">3</span></label>
-     <label><input class="rr_input" type="radio" name="rating" id="four"/><span class="rr_span">4</span></label>
-     <label><input class="rr_input" type="radio" name="rating" id="five"/><span class="rr_span">5</span></label>
-    </div>
+    <form action="thank_you.html" method="get" onsubmit= "return isChecked();" class="rating_radio">      
+      <input class="rr_input" type="radio" name="rating" id="one" value="one"/><span class="rr_span">1</span>
+      <input class="rr_input" type="radio" name="rating" id="two" value="two"/><span class="rr_span">2</span>
+      <input class="rr_input" type="radio" name="rating" id="three" value="three"/><span class="rr_span">3</span>
+      <input class="rr_input" type="radio" name="rating" id="four" value="four"/><span class="rr_span">4</span>
+      <input class="rr_input" type="radio" name="rating" id="five" value="five"/><span class="rr_span">5</span>
+      <input class="rr_button" type="submit" value="SUBMIT"></input>
+    </form>
 
-    <button onclick="buttonclick()" class="rr_button" type="button" id="submit" value="click">SUBMIT</button>
+ 
 
   </div>
 
-  <script src="rating.js"></script>
+  <script type="text/javascript">
+    function isChecked() {
+      var checkOne = document.getElementById('one').checked;
+      var checkTwo = document.getElementById('two').checked;
+      var checkThree = document.getElementById('three').checked;
+      var checkFour = document.getElementById('four').checked;
+      var checkFive = document.getElementById('five').checked;
 
-
+      if (checkOne == false && checkTwo == false && checkThree && false && checkFour == false && checkFive == false) {
+        alert("You need to select an option!");
+        return false;
+      }
+      else{
+        return true;
+      }
+    }
+  </script>
 
 </body>
 </html>
