@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="interactive-rating-component-main.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+  
 <title>Frontend Mentor | Interactive rating component</title>
 
 </head>
@@ -15,8 +16,6 @@
   <div class="container">
 
     <img class="rr_img" src="images/icon-star.svg">
-
-  <!-- Rating state start -->
     
     <h1 class="rr_h1">How did we do?</h1>
 
@@ -25,7 +24,7 @@
       to help us improve our offering!
     </p>
 
-    <form action="thank_you.html" method="get" onsubmit= "return isChecked();" class="rating_radio">      
+    <form action="thank_you.html" method="get" onsubmit= "return isChecked();" onsubmit="return rating();" class="rating_radio">      
       <input class="rr_input" type="radio" name="rating" id="one" value="one"/><span class="rr_span">1</span>
       <input class="rr_input" type="radio" name="rating" id="two" value="two"/><span class="rr_span">2</span>
       <input class="rr_input" type="radio" name="rating" id="three" value="three"/><span class="rr_span">3</span>
@@ -34,27 +33,9 @@
       <input class="rr_button" type="submit" value="SUBMIT"></input>
     </form>
 
- 
-
   </div>
 
-  <script type="text/javascript">
-    function isChecked() {
-      var checkOne = document.getElementById('one').checked;
-      var checkTwo = document.getElementById('two').checked;
-      var checkThree = document.getElementById('three').checked;
-      var checkFour = document.getElementById('four').checked;
-      var checkFive = document.getElementById('five').checked;
-
-      if (checkOne == false && checkTwo == false && checkThree && false && checkFour == false && checkFive == false) {
-        alert("You need to select an option!");
-        return false;
-      }
-      else{
-        return true;
-      }
-    }
-  </script>
-
 </body>
+
+  <script src="rating.js"></script>
 </html>
