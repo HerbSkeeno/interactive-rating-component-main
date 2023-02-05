@@ -1,7 +1,3 @@
-/*
-  var ratingOne = document.getElementById('yourRating').innerHTML = 'You selected 1 out of 5';
-  */
-
 
 const mainContainer = document.querySelector(".main_container")
 const thankYouContainer = document.querySelector(".thankYou_container")
