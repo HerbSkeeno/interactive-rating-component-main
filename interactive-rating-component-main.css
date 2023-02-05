@@ -1,5 +1,4 @@
 
-
 ul{list-style: none;}
 
 *{margin:0; padding: 0; box-sizing: border-box; font-family: 'Overpass', sans-serif;}
@@ -17,7 +16,7 @@ body {
 .main_container, .thankYou_container {
     background-color: hsl(213, 19%, 18%);
     border-radius: 15px;
-    width: 48%;
+    width: 50%;
     padding: 2rem;
     margin: auto
 }
@@ -34,7 +33,6 @@ body {
     font: inherit;
     margin: 2.5rem 0 1rem 0;
     font-size: 2rem;
-
 }
 
 .main_container p{
@@ -125,12 +123,13 @@ body {
 .thankYou_container p{
     color: hsl(217, 12%, 63%);
     text-align: center;
-    margin: 0 auto 2rem auto;
+    margin: 0 0 2rem 0;
     line-height: 1.5rem;
+    width: 100%;
 }
 
 .hidden{
- display: none;
+    display: none;
 }
 
 .attribution {
@@ -138,9 +137,9 @@ body {
     text-align: center;
     color: #fff;
     margin-top: 2rem;
-  }
+}
   
-  .attribution a {
+.attribution a {
     color: hsl(128, 47%, 61%);
   }
 
@@ -149,10 +148,65 @@ body {
         background-color: hsl(213, 19%, 18%);
         border-radius: 15px;
         width: 100%;
-        padding: 2rem;
+        padding: 1.2rem;
         margin: auto
     }
 
-}
+    .main_container p{
+        margin-bottom: 1rem;
+        color: hsl(217, 12%, 63%);
+        line-height: 1.5rem;
+        font-size: .9rem;
+    }
 
+    .main_container img{
+        background-color: hsl(213, 19%, 25%);
+        padding: 10px;
+        border-radius: 50px;
+        margin-left: .5rem;
+        margin-top: 1rem;
+    }
+
+    .main_container h1{
+        color: white;
+        font: inherit;
+        margin: 1rem 0 1rem 0;
+        font-size: 1.5rem;
+    }
+
+    .thankYou_container img{
+        display: block;
+        margin: 1rem auto 2rem auto;
+    }
+
+
+    #select{
+        margin: auto;
+        background-color: hsl(213, 19%, 25%);
+        width: 65%;
+        margin-bottom: 1.5rem;
+        align-items: center;
+        padding: .2rem;
+        border-radius: 20px;
+        color: hsl(25, 97%, 53%);
+    }
+
+    .thankYou_container p{
+        color: hsl(217, 12%, 63%);
+        text-align: center;
+        margin: 0 0 1rem 0;
+        line-height: 1.5rem;
+        width: 100%;
+        font-size: .9rem;
+    }
+
+    .thankYou_container h1{
+        margin-bottom: 1rem;
+        color: white;
+        text-align: center;
+        font: inherit;
+        font-size: 1.5rem;
+    }
+    
+}
 
