@@ -1,164 +1,90 @@
-*{margin:0; padding: 0;}
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
 
-.rr_p, ul, button span{
-    font-family: 'Overpass', sans-serif;
-}
+ul{list-style: none;}
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
+*{margin:0; padding: 0; box-sizing: border-box; font-family: 'Overpass', sans-serif;}
 
-.bg{
+body {
     background-color: hsl(216, 12%, 8%);
-    height: 100vh;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 1.5rem;
 }
 
-.container{
-    position: relative;
-    top: 23%;
-    width: 90%;
-    height: 55%;
-    margin: auto;
-    background-color: #1f2630;
-    padding-top: 7%;
-    border-radius: 10px;
-    box-sizing: border-box;
+.main_container, .thankYou_container {
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 15px;
+    width: 48%;
+    padding: 2rem;
+    margin: auto
 }
 
-.rr_img{
-    position: absolute;
-    margin-left: 30px;
+.main_container img{
     background-color: hsl(213, 19%, 25%);
     padding: 10px;
     border-radius: 50px;
+    margin-left: .5rem;
 }
 
-.thx_img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;   
-}
-
-.rr_h1{
-    margin-top: 16.5%;
-    margin-left: 7%;
-    position: absolute;
-    font-family: 'Overpass', sans-serif;
+.main_container h1{
     color: white;
-    font-weight: 400;
-    font-size: 1.5rem;
-}
-
-.select{
-    display: block;
-    color: #f97813;
-    background-color: #262f37;
-    padding: 5px;
-    text-align: center;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.5rem;
-    border-radius: 50px;
+    font: inherit;
+    margin: 2.5rem 0 1rem 0;
+    font-size: 2rem;
 
 }
 
-.thx_h1{
-    display: block;
-    color: white;
-    font-family: 'Overpass', sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
-    text-align: center;
-}
-
-.rr_p{
-    display: block;
-    margin-top: 28%;
-    margin-left: auto;
-    margin-right: auto;
+.main_container p{
+    margin-bottom: 1rem;
     color: hsl(217, 12%, 63%);
-    line-height: 23px;
-    font-size: .93rem;
-    width: 87%;
+    line-height: 1.5rem;
 }
 
-.thx_p{
-    display: block;
-    color: hsl(217, 12%, 63%);
-    text-align: center;
-    font-family: 'Overpass', sans-serif;
-    line-height: 23px;
-    font-size: .93rem;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1rem;
-}
-
-.rating_radio{
-    position: absolute;
-    top: 60%;
-    margin-left: 7%;
+.main_container ul{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
 }
 
-.rr_input[type="radio"]{
-    margin-right: 20px;
-    appearance: none;
-    color: hsl(213, 19%, 25%);
+.main_container ul li{
     background-color: hsl(213, 19%, 25%);
-    width: 2.50rem;
-    height: 2.50rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50px;
+    text-align: center;
+    padding: .9rem;
+    color: hsl(217, 12%, 63%);
     font: inherit;
-    border-radius: 50%;
+    cursor: pointer;
     border: none;
+    transition: .4s;
 }
 
-.rr_input input[type="radio"]::before{
-    content: "";
-    width: 2.50rem;
-    height: 2.50rem;
-    border-radius: 50%;
-    transform: scale(0);
-}
-
-.rr_input[type="radio"]:checked::before{
-    transform: scale(1);
-}
-
-.rr_input[type="radio"]:focus {
+.main_container ul li:hover {
     background-color: hsl(25, 97%, 53%);
-    border: none;
-}
-
-.rr_span{
-    font-family: 'Overpass', sans-serif;
-    font-size: .70rem;
-    position: absolute;
-    margin-left: -12.7%;
-    margin-top: 3.5%;
     color: white;
 }
 
-:focus{
-    outline: 0;
+.main_container ul li:focus {
+    background-color: hsl(217, 12%, 63%);
+    color: white;
 }
 
-.rr_button{
-    position: absolute;
+.main_container input{
     display: block;
+    font: inherit;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10%;
-    width: 88%;
+    margin-bottom: 5%;
+    width: 100%;
     padding: 15px;
     background-color: hsl(25, 97%, 53%);
     color: white;
@@ -167,164 +93,66 @@
     letter-spacing: 3px;
 }
 
-.rr_button:hover {
+.main_container button:focus{
+    color: hsl(25, 97%, 53%);
     background-color: white;
+}
+
+#select{
+    margin: auto;
+    background-color: hsl(213, 19%, 25%);
+    width: 50%;
+    margin-bottom: 2rem;
+    align-items: center;
+    padding: .2rem;
+    border-radius: 20px;
     color: hsl(25, 97%, 53%);
 }
 
+.thankYou_container img{
+    display: block;
+    margin: 0 auto 2rem auto;
+}
 
-@media only screen and (min-width: 376px){
+.thankYou_container h1{
+    margin-bottom: 1rem;
+    color: white;
+    text-align: center;
+    font: inherit;
+    font-size: 2rem;
+}
 
-    .container{
-        position: relative;
-        top: 31%;
-        width: 30%;
-        height: 38%;
-        background-color: #1f2630;
-        padding-top: 3%;
-        border-radius: 20px;
-        box-sizing: border-box;
-    }
-    
-    .rr_img{
-        position: absolute;
-        margin-left: 30px;
-        background-color: hsl(213, 19%, 25%);
-        padding: 10px;
-        border-radius: 50px;
-    }
-    
-    .thx_img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;   
-    }
-    
-    .rr_h1{
-        margin-top: 16.5%;
-        margin-left: 7%;
-        position: absolute;
-        font-family: 'Overpass', sans-serif;
-        color: white;
-        font-weight: 400;
-        font-size: 1.5rem;
-    }
-    
-    .select{
-        display: block;
-        color: #f97813;
-        background-color: #262f37;
-        padding: 5px;
-        text-align: center;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 1.5rem;
-        border-radius: 50px;
-    
-    }
-    
-    .thx_h1{
-        display: block;
-        color: white;
-        font-family: 'Overpass', sans-serif;
-        font-weight: 400;
-        font-size: 1.5rem;
-        margin-top: 1.5rem;
-        text-align: center;
-    }
-    
-    .rr_p{
-        display: block;
-        margin-top: 28%;
-        margin-left: auto;
-        margin-right: auto;
-        color: hsl(217, 12%, 63%);
-        line-height: 23px;
-        font-size: .93rem;
-        width: 87%;
-    }
-    
-    .thx_p{
-        display: block;
-        color: hsl(217, 12%, 63%);
-        text-align: center;
-        font-family: 'Overpass', sans-serif;
-        line-height: 23px;
-        font-size: .93rem;
-        width: 87%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 1rem;
-    }
-    
-    .rating_radio{
-        position: absolute;
-        top: 64%;
-        margin-left: 7%;
+.thankYou_container p{
+    color: hsl(217, 12%, 63%);
+    text-align: center;
+    margin: 0 auto 2rem auto;
+    line-height: 1.5rem;
+}
+
+.hidden{
+ display: none;
+}
+
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    margin-top: 2rem;
+  }
+  
+  .attribution a {
+    color: hsl(128, 47%, 61%);
+  }
+
+@media only screen and (max-width: 375px) {
+    .main_container, .thankYou_container {
+        background-color: hsl(213, 19%, 18%);
+        border-radius: 15px;
         width: 100%;
-    }
-    
-    .rr_input[type="radio"]{
-        margin-right: 24px;
-        appearance: none;
-        color: hsl(213, 19%, 25%);
-        background-color: hsl(213, 19%, 25%);
-        width: 2.75rem;
-        height: 2.75rem;
-        font: inherit;
-        border-radius: 50%;
-        border: none;
-    }
-    
-    .rr_input input[type="radio"]::before{
-        content: "";
-        width: 2.75rem;
-        height: 2.75rem;
-        border-radius: 50%;
-        transform: scale(0);
-    }
-    
-    .rr_input[type="radio"]:checked::before{
-        transform: scale(1);
-    }
-    
-    .rr_input[type="radio"]:focus {
-        background-color: hsl(25, 97%, 53%);
-        border: none;
-    }
-    
-    .rr_span{
-        font-family: 'Overpass', sans-serif;
-        font-size: .70rem;
-        position: absolute;
-        margin-left: -13%;
-        margin-top: 3.7%;
-        color: white;
-    }
-    
-    :focus{
-        outline: 0;
-    }
-    
-    .rr_button{
-        position: absolute;
-        display: block;
-        margin-left: 7%;
-        margin-right: 7%;
-        margin-top: 26%;
-        width: 87%;
-        padding: 15px;
-        background-color: hsl(25, 97%, 53%);
-        color: white;
-        border-style: none;
-        border-radius: 25px;
-        letter-spacing: 3px;
-    }
-    
-    .rr_button:hover {
-        background-color: white;
-        color: hsl(25, 97%, 53%);
+        padding: 2rem;
+        margin: auto
     }
 
 }
+
+
